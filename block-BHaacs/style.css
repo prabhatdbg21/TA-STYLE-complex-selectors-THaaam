@@ -214,10 +214,10 @@ hr {
     padding: 0.9rem 1.5rem;
     margin-top: 1.5rem;
 }
-.learn span::before, .learn span::after{
-    width: 1rem;
-    height: 1rem;
-    color : red;
+.learn span::after{
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg);
 }
 
 /* Score */
@@ -225,6 +225,7 @@ hr {
 table{
     border: 1px solid;
     width :  100%;
+    border-collapse: collapse;
 }
 tr{
     height: 3rem;
@@ -236,14 +237,14 @@ th{
     padding: 0 1.5rem;
 }
 td {
-    border: 1px solid;
     padding: 0 1.5rem;
+    border: 2px solid #e8eefb;
 }
 thead :nth-child(1){
     background-color: var(--bg);
 }
-tbody th :nth-child(1){
-    background-color: var(--bg);
+tbody tr:nth-child(2n){
+    background-color: #d5e4e5 ;
 }
 
 /* Study */
@@ -295,6 +296,15 @@ tbody th :nth-child(1){
 .box span{
     font-size: 5rem;
     color: var(--bg);
+}
+.box span::after{
+    content: "/Month";
+    font-size: 1.2rem;
+    color: black;
+}
+.box span::before{
+    content: "$";
+    font-size: 2rem;
 }
 .box hr{
     margin: 0.5rem 0 1.5rem 0;
